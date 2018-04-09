@@ -1,7 +1,5 @@
 package com.liang.chapter12;
 
-import java.util.function.DoubleToLongFunction;
-
 public class Triangel {
 	private int side1;
 	private int side2;
