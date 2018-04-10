@@ -5,7 +5,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Arrays;
 import java.util.Map;
-import java.util.function.Function;
 import java.util.AbstractMap.SimpleEntry;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -14,41 +13,30 @@ public class FileReading {
 	
 	public static void main(String[] args) throws FileNotFoundException {
 		
-//         File fil=new File("D:\\Name.txt");
-//         
-//         Scanner scan =new Scanner(fil);
-//         
-//         StringBuilder stb=new StringBuilder();
-//         
-//         while(scan.hasNext()) {
-//        	 stb.append(scan.next());
-//         }
-//         
-//         scan.close();
-//         
          try {
         	 
         	String bits=new String(Files.readAllBytes(Paths.get("D:\\Name.txt")));
+        	
+        	//First Approach
+  	
+        	Map<String,Long> mp=Arrays.stream(bits.split("")).
+        			collect(Collectors.groupingBy(P -> String.valueOf(P),Collectors.counting()));
+        	
+        	mp.forEach((k,v) -> System.out.println("Key "+k+" Value "+v));
+        	
+        	//Second Way
+        	
+        	
+        	
+//       	Map<String,Integer> g=Arrays.stream(bits.split("")).map(x -> x.split("")).collect(Collectors.toMap(p -> p[0],p -> new Integer(1), (old,newval) -> old+1));
+        	
 
         	
-//        	Map<Object, Object> adc=
         	
-//        			Map<String,Integer> dc=
-        	
-//        					bits.chars().map(x -> (char)x).collect(Collectors.toMap(x -> x.toString() , Collectors.counting()));
-        	
-//          Map<Character,Integer> mp=Stream.of(bits.toCharArray())
-//        		  .map(i -> new SimpleEntry<>(i[0],1)).collect(Collectors.toMap(SimpleEntry::getKey, SimpleEntry::getValue));
-        	
-        	Stream.of(bits.toCharArray()).collect(Collectors.toMap("Ch",Collectors.counting()));
-          
-          
-//          mp.forEach((k,v) -> System.out.println(" Key "+k+" Value "+v));
+//       	System.out.println(g);
 
-        	
-//        	bits.chars().
 			
-		} catch (Exception e) {	}
+		} catch (Exception e) {e.printStackTrace();	}
          
 	}
 }
