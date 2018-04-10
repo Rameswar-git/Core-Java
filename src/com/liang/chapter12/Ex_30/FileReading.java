@@ -37,11 +37,13 @@ public class FileReading {
         	
 //        					bits.chars().map(x -> (char)x).collect(Collectors.toMap(x -> x.toString() , Collectors.counting()));
         	
-          Map<Character,Integer> mp=Stream.of(bits.toCharArray())
-        		  .map(i -> new SimpleEntry<>(i[0],1)).collect(Collectors.toMap(SimpleEntry::getKey, SimpleEntry::getValue));
+//          Map<Character,Integer> mp=Stream.of(bits.toCharArray())
+//        		  .map(i -> new SimpleEntry<>(i[0],1)).collect(Collectors.toMap(SimpleEntry::getKey, SimpleEntry::getValue));
+        	
+        	Stream.of(bits.toCharArray()).collect(Collectors.toMap("Ch",Collectors.counting()));
           
           
-          mp.forEach((k,v) -> System.out.println(" Key "+k+" Value "+v));
+//          mp.forEach((k,v) -> System.out.println(" Key "+k+" Value "+v));
 
         	
 //        	bits.chars().
