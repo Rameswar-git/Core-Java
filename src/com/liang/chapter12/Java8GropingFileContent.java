@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 public class Java8GropingFileContent {
 
 	public static void main(String[] args) {
-       String name="Rameswar  Das";
+       String name=" Rameswar  Das";
        
       long np= name.chars().filter(x -> x !=32 ).count();
       
@@ -27,6 +27,8 @@ public class Java8GropingFileContent {
     	  Map<String, Long> adc=asc.flatMap(line -> Arrays.stream(line.trim().split("\\s")))
     			  .map(word -> word.replaceAll("[^a-zA-Z]", "").toLowerCase().trim()).filter(t -> t.length()>0)
     			  .map(wor -> new SimpleEntry<>(wor,1)).collect(Collectors.groupingBy((SimpleEntry::getKey),Collectors.counting()));
+    	  
+    	  adc.forEach((k,v) -> System.out.println(" Key is "+k+" and Value is "+v));
     	  
 //    	  adc.forEach((k,v) -> System.out.println("Key ->"+k+" Value -> "+v));
     	  
@@ -45,7 +47,7 @@ public class Java8GropingFileContent {
     	  
     	      	  
       }catch (Exception e) {
-    	  
+    	  e.printStackTrace();
 	  }
 	}
 
