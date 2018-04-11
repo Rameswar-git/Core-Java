@@ -2,7 +2,6 @@ package com.arralisteaxmple;
 
 import java.util.LinkedList;
 
-import jdk.internal.dynalink.beans.StaticClass;
 
 
 public class arraylisttest {

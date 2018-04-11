@@ -12,7 +12,6 @@ import java.util.Date;
 
 import javax.imageio.ImageIO;
 
-import com.sun.org.apache.bcel.internal.generic.NEW;
 
 import javafx.scene.transform.Scale;
 
