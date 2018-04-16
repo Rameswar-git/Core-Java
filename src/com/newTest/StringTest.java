@@ -3,6 +3,10 @@ package com.newTest;
 import java.util.Arrays;
 
 public class StringTest {
+	
+	class har{
+		
+	}
 
 	public static void main(String[] args) {
           String name1="1 	Jacob	30,541 	Emily 	24,450";
