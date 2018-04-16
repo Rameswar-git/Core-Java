@@ -1,4 +1,4 @@
-package com.liang.chapter13.Ex_21;
+package com.liang.chapter13.Ex_11;
 
 public class Octagon extends GeometricObject implements Cloneable,Comparable<Octagon> {
     
