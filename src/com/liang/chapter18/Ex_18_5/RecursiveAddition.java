@@ -4,13 +4,16 @@ public class RecursiveAddition {
 
 	public static void main(String[] args) {
 		
-		RecAdd(10);
-          
+		System.out.printf("Addition is %.2f\n",RecAdd(10.0));
+		
 	}
 
-	private static void RecAdd(int i) {
-		
-		
+	private static double RecAdd(Double i) {
+		double no=i/(2*i+1);
+       if(i == 0)
+          return 0;
+       else
+		return no+=RecAdd(i-1);
 	}
 
 }
