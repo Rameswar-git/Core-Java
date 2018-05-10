@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ComparabelTest {
 
@@ -20,7 +21,7 @@ public class ComparabelTest {
 		std.add(st3);
 		std.add(st4);
 		
-		System.out.println(std.toString());
+		System.out.println(std);
 		
 //		Collections.sort(std);
 		
@@ -28,11 +29,12 @@ public class ComparabelTest {
 		
 //		System.out.println(std.toString());
 		
-		Collections.sort(std,(Student s1,Student s2) -> s1.getName().compareTo(s2.getName()));
+//		Collections.sort(std,(Student s1,Student s2) -> s1.getName().compareTo(s2.getName()));
 		
-//		std.sort((Student s1,Student s2) -> s1.getName().compareTo(s2.getName()));
+		std.sort((Student s1,Student s2) -> s1.getName().compareTo(s2.getName()));
 		
-		System.out.println(std.toString());
+		
+		System.out.println(std);
 
 
 	}

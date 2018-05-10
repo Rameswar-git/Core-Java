@@ -1,7 +1,9 @@
 package com.JavaGeneraics;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GroceryStore {
 
@@ -25,6 +27,10 @@ public class GroceryStore {
 			super(name);
 			this.size = size;
 		}
+		
+        public int getSize() {
+            return size;
+        }
 
 	}
 
@@ -35,30 +41,50 @@ public class GroceryStore {
 			super(name, size);
 			this.origin = origin;
 		}
+		
+        public String getOrigin() {
+            return origin;
+        }
 
 	}
 
 	public static void main(String[] args) {
-		 
+   
+        List<? super Fruit> fruitsBasket=Fill();
+        
+        
+        List<Apple> anotherBasket = new ArrayList<>();
+       
+        anotherBasket.add(new Apple("apple", 5, "US"));
+        anotherBasket.add(new Apple("apple", 8, "UK"));
+        anotherBasket.add(new Apple("apple", 9, "CN"));
+        
+       Fruit fr=getBiggestFruit(anotherBasket);
+       
+       System.out.println(fr.getSize());
 		   
-//		  GroceryStore.Fill();
+	}
+	
+	private static  List<? super Fruit> Fill() {
+		
+		 List<? super Fruit> fruitsBasket = new ArrayList<>();
+		 
+	    fruitsBasket.add(new Apple("apple", 5, "US"));
+	    fruitsBasket.add(new Apple("apple", 8, "UK"));
+	    fruitsBasket.add(new Apple("apple", 9, "CN"));
+		 
+		return fruitsBasket;
 
 	}
 	
-	private  <T extends Fruit>  void sum1() {
+	private static   Fruit  getBiggestFruit(List<? extends Fruit> bas) {
+		
+		assert(!bas.isEmpty());
+		
+		Fruit f=bas.stream().max(Comparator.comparing(i -> i.getSize())).get();
 		
 		
-//		return a.doubleValue()+b.doubleValue();
-//		return a.doubleValue()+b.doubleValue();
+		return f;
 	}
-	
-	
-//	   <? super Fruit>  void Fill() {
-//		  
-////		 List<? super Fruit> fruitsBasket = new ArrayList<>();
-//		 
-////		return fruitsBasket;
-//		
-//	}
 
 }
