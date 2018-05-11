@@ -18,27 +18,31 @@ public class BabyCommonNames {
 		
         BufferedReader bufferedReader = new BufferedReader( new InputStreamReader(ur.openStream()));
         
-       Stream<String> brs=bufferedReader.lines();
+       Stream<String> brsmale=bufferedReader.lines();
+       
        
        Set<String> malenames=new HashSet<>();
        Set<String> femalenames=new HashSet<>();
        Set<String> commonnames=new HashSet<>();
        
-       brs.map(x -> x.split("\\t")).forEach(r -> malenames.add(r[1]));
-       
-//       bufferedReader.lines().map(x -> x.split("\\t")).forEach(p -> femalenames.add(p[1]));
-       
-       malenames.forEach(d -> {
-    	   if(femalenames.contains(d)) {
-    		   commonnames.add(d);
-    		   
-    	   }
+       brsmale.map(x -> x.split("\\t")).forEach(r ->{
+    	   malenames.add(r[1].trim());
+    	   femalenames.add(r[3].trim());
+    	   
        });
        
-
+       malenames.retainAll(femalenames);
        
-       System.out.println(" Size is "+commonnames.size());
-       System.out.println(" values are  "+commonnames);
+       
+//       malenames.forEach(d -> {
+//    	   if(femalenames.contains(d)) {
+//    		   commonnames.add(d);
+//    		   
+//    	   }
+//       });
+       
+       System.out.println(" Size is "+malenames.size());
+       System.out.println(" values are  "+malenames);
        
        
        
