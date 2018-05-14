@@ -1,16 +1,14 @@
 package com.liang.chapter18.Ex_18_25;
 
-import org.apache.commons.math3.util.ArithmeticUtils;
 
 public class RecursiveStringPermutation {
 
 	public static void main(String[] args) {
 		
-		RecPermutation("","ABCDE");
+		RecPermutation("","ABC");
 		
 		//By using Factorial also it might Possibel
 		
-	   System.out.println(ArithmeticUtils.factorial(20));
 
 	}
 
