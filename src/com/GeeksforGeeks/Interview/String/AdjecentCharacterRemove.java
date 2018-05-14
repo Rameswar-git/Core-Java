@@ -3,29 +3,39 @@ package com.GeeksforGeeks.Interview.String;
 public class AdjecentCharacterRemove {
 
 	public static void main(String[] args) {
-		String string = "acaaabbbacdddd";
+		String string = "geeksforgeek";
     
-//		StringBuffer sb=new StringBuffer(string);
-//		
-//		for (int i = sb.length()-2 ; i >=0 ; i--) {
-//			if(sb.charAt(i) == sb.charAt(i+1)) {
-//				sb.deleteCharAt(i+1);
-//			}
-//			
-//		}
+		StringBuffer sb=new StringBuffer(string);
 		
-		   StringBuilder sb = new StringBuilder();
-		    if (string.length() > 0) {
-		        char prev = string.charAt(0);
-		        sb.append(prev);
-		        for (int i = 1; i < string.length(); ++i) {
-		            char cur = string.charAt(i);
-		            if (cur != prev) {
-		                sb.append(cur);
-		                prev = cur;
-		            }
-		        }
-		    }
+		
+		int ln=sb.length();
+		
+
+		int n=ln-1;
+			while(true && n>0) {
+				
+			
+				boolean make=false;
+				while(true && n > 0) {
+					if((string.charAt(n) == string.charAt(n-1)) && (sb.charAt(n) == sb.charAt(n-1))) {
+						make=true;
+						n--;
+					}else {
+						break;
+					}
+					
+				}
+				
+				if(make) {
+					sb=new StringBuffer(sb.replace(n, ln, ""));
+					ln=sb.length();	
+					n=ln-1;
+				}else {
+					n--;
+					ln--;
+				}
+				
+			}		
 		
 		System.out.println(sb.toString());
 
