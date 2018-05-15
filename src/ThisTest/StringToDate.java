@@ -1,8 +1,5 @@
 package ThisTest;
 
-import java.lang.management.ManagementFactory;
-import java.lang.management.MemoryMXBean;
-
 public class StringToDate {
 
   public static void main(String[] args) {
