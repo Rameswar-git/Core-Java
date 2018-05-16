@@ -3,8 +3,8 @@ package CompleteInterview;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class RemoveDuplicatesFromArray {
 
@@ -14,14 +14,17 @@ public class RemoveDuplicatesFromArray {
 		
 		System.out.println(" Before removing Duplicates The elements are "+Arrays.toString(ins));
 		
+		// Complete Remove of duplicates
 		
-	List<int[]> sjhv=Arrays.asList(ins).stream()
-			.filter( x -> Collections.frequency(Arrays.asList(ins), x) < 2).collect(Collectors.toList());
-	
+		List<Integer> sdjhv=Arrays.stream(ins).boxed().collect(Collectors.toList());
+		
+		Integer[] nc=Arrays.stream(ins).boxed().filter(x -> Collections.frequency(sdjhv, x) < 2).toArray(Integer[]::new);
+		
+	  //  keep  each integre with single only
 		
 //		ins=Arrays.stream(ins).distinct().toArray();
 		
-		System.out.println(" Before removing Duplicates The elements are "+Arrays.toString(sjhv.get(0)));
+		System.out.println(" Before removing Duplicates The elements are "+Arrays.toString(nc));
 
 	}
 
