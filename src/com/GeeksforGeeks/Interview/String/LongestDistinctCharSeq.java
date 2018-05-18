@@ -27,12 +27,9 @@ public class LongestDistinctCharSeq {
 					break;
 				}else {
 					n--;
-				}
-				
+				}	
 			}
-			
 			n--;
-			
 		}
 		
 		System.out.println(name.substring(start, end).length());

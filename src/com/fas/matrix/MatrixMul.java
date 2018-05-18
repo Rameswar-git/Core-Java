@@ -48,6 +48,8 @@ public class MatrixMul {
 	}
 		scanner.close();	
 }
+	
+
 
 	private static int[][] multiply(int[][] a, int[][] b) {
 		int[][] c=new int[a.length][b[0].length];
