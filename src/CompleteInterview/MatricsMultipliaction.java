@@ -40,7 +40,7 @@ public class MatricsMultipliaction {
 			}
 			System.out.println();
 		}
-
+		scan.close();
 	}
 
 	private static int[][] MultiplyMatrics(int[][] a, int[][] b) {
