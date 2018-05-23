@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author Rameswar Prasad Das
  *
  */
-public class Automorphic {
+public class AutomorphicNoTest {
 
 	/**
 	 * @param args

@@ -1,4 +1,4 @@
-package ProducerAndConsumer;
+package Usefulprograms;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Java8Example2 {
+public class Java8MapSort {
 	 
 	 public static void main(String[] args) {
 
@@ -21,6 +21,7 @@ public class Java8Example2 {
 		 
 		 System.out.println(result);
 		 
+		 
 		 Map<String, Long> finalMap = new LinkedHashMap<>();
 		 
 		 result.entrySet().stream().sorted(Map.Entry.<String,Long>comparingByValue()
@@ -28,7 +29,7 @@ public class Java8Example2 {
 		 
 		   System.out.println("After Sorting The Elements Of Array");
 		 
-		 System.out.println(finalMap);
+		 System.out.println(result);
 		 
 	}
 

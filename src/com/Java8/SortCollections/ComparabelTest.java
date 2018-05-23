@@ -23,6 +23,8 @@ public class ComparabelTest {
 		
 		System.out.println(std);
 		
+//		std.stream().sorted();
+		
 //		Collections.sort(std);
 		
 //		std.sort(Comparator.comparing(a -> a));

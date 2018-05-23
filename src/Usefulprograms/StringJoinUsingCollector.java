@@ -1,10 +1,12 @@
-package Synchronize;
+package Usefulprograms;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class StringDeli {
+import Synchronize.Game;
+
+public class StringJoinUsingCollector {
 
 	public static void main(String[] args) {
   

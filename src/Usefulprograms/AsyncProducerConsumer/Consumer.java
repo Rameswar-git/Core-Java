@@ -1,4 +1,4 @@
-package com.fas.asyncproducerconsumer;
+package Usefulprograms.AsyncProducerConsumer;
 
 public class Consumer implements Runnable{
 	Broker br;

@@ -1,4 +1,4 @@
-package ProducerAndConsumer;
+package Usefulprograms;
 
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -7,7 +7,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Java8FilterWithsort {
+public class Java8DuplicateGroupUsingFunction {
 
 	public static void main(String[] args) {
 		

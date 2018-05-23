@@ -1,8 +1,8 @@
-package com.ArrayRotation;
+package CompleteInterview;
 
 import java.util.Arrays;
 
-public class ArrayRotation {
+public class ArrayClockAndAntiWiseRotation {
 
     public static void main(String[] args) {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
@@ -25,7 +25,6 @@ public class ArrayRotation {
                 a[j] = a[j + 1];
             }
             a[n - 1] = temp;
-            System.out.println(Arrays.toString(a));
         }
         return a;
 
