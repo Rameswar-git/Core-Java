@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class ObjectArrToStringArr {
+public class JsonObjectArrayToMap {
 	
 	public static void main(String[] args) {
 		Object[] objs=new Object[2];

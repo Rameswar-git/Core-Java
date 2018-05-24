@@ -1,4 +1,4 @@
-package com.test.programs;
+package Usefulprograms;
 
 import java.text.DateFormat;
 import java.text.ParseException;
@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.Locale;
 
 
-public class datediff {
+public class DateDifference {
 
 	public static void main(String[] args) throws ParseException {
 		

@@ -1,6 +1,6 @@
-package com.practice;
+package CompleteInterview;
 
-public class otherfib {
+public class FibinacieesSerie {
 
 	public static void main(String[] args) {
 		 int n1=0,n2=1,n3,i,count=5;    

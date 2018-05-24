@@ -11,7 +11,7 @@ import java.util.Scanner;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class ChangeFiles {
+public class EditFileContent {
 
 	public static void main(String[] args) {
 		File f=new File("D:\\Test");

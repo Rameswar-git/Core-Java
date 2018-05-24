@@ -12,13 +12,10 @@ import java.util.Map.Entry;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Fileeordorder {
+public class FileContentGrouping {
 
 	public static void main(String[] args) throws IOException {
-		
-		List<String> lst=Arrays.asList(new String(Files.readAllBytes(Paths.get("D:\\Ram.txt")))
-				  .split(" "));
-		
+
 		
 		 Map<String, Long> result=Arrays.asList(new String(Files.readAllBytes(Paths.get("D:\\Ram.txt"))).toLowerCase()
 				  .split(" ")).stream().collect(Collectors.groupingBy(Function.identity(), Collectors.counting()));

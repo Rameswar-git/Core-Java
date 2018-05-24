@@ -1,9 +1,10 @@
-package com.liang.chapter4;
+package Usefulprograms.Java8CollectionsOfPremitivesSort;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 
 
@@ -27,7 +28,7 @@ public class CitiesSort {
                  
 //         Collections.sort(cities);
          
-         cities.stream().sorted();
+         cities=cities.stream().sorted().collect(Collectors.toList());
          
 //         cities.sort((o1,o2) -> o1.compareTo(o2));
          

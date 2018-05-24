@@ -1,28 +1,31 @@
 package com.practice;
 
+import java.util.ArrayDeque;
+import java.util.UUID;
 
 public class CopybyValue {
-	static int m=30;
+	
 	public static void main(String[] args) {
 		
-		int[] a={2,5};
-		CopybyValue m1=new CopybyValue();
-		m1.test1(m,a);
-		System.out.println(m);
-		System.out.println(a[0]);
-		test2(m);
-		System.out.println(m);
-
-	}
-
-	private static void test2(int m) {
-
+		ArrayDeque<String> ad=new ArrayDeque<>();
 		
+		for (int i = 0; i < 5; i++) {
+			ad.add(UUID.randomUUID().toString().replace("-", ""));
+			
+		}
+		System.out.println("ad::::"+ad.size());
+
+		for (int i = 0; i < 6; i++) {
+			System.out.println(ad.pop());
+		}
+		
+           
 	}
 
-	private void test1(int m, int[] a) {
-		this.m=45;
-		a[0]=6;
+	private static String Test1(String name) {
+		return name="Test2";
 	}
+
+
 
 }

@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Java8FileWordSorting {
+public class Java8FileContentIntoStringAndSort {
 
 	public static void main(String[] args) {
 		

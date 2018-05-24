@@ -1,4 +1,4 @@
-package com.newTest;
+package CompleteInterview;
 
 import java.util.Arrays;
 import java.util.Map;

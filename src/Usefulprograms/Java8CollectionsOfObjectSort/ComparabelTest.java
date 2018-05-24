@@ -1,4 +1,4 @@
-package com.Java8.SortCollections;
+package Usefulprograms.Java8CollectionsOfObjectSort;
 
 import java.util.ArrayList;
 import java.util.List;

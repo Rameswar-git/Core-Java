@@ -29,6 +29,8 @@ public class FileRankSummary {
 			List<String[]> alllines = lines.map(p -> p.split("\\t"))
 					.map(s  -> Arrays.stream(s).map(d -> d.trim()).toArray(String[]::new)).collect(Collectors.toList());
 					
+			
+			
 //			alllines.forEach(f -> System.out.println(Arrays.toString(f)));			
 					
 //			print(i,li);

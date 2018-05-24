@@ -15,12 +15,19 @@ public class DivisibelTest {
 		
 		for (int i = 2; i < 10 && no > 0; i++) {
 			while(no % i == 0){
-				integers.add(i);
+				if(integers.contains(i)) {
+					Object o=i;
+					integers.remove(o);
+				}else {
+					integers.add(i);
+				}
+				
 				no=no/i;
 			}
 		}
 		
-		int integers5=integers.stream().filter(x -> Collections.frequency(integers, x) < 2).reduce(1,(x,y) -> x*y);
+		
+		int integers5=integers.stream().reduce(1,(x,y) -> x*y);
 		System.out.println(integers5);
 		sc.close();
 	}

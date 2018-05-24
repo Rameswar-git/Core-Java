@@ -3,7 +3,7 @@ package com.RepeatedStringinsideString;
 import java.util.HashMap;
 import java.util.Map;
 
-public class RepeatedStringinString {
+public class StringRepeatedCharactertoMapBelowJava8 {
 	
 	private static int cout=0;
 	private static Map<Integer,Integer> mp=new HashMap<>();

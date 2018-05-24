@@ -1,4 +1,4 @@
-package com.liang.chapter19.Ex_19_2;
+package Usefulprograms.Java8DistinctObjectFilter;
 
 import java.util.ArrayList;
 import java.util.HashSet;

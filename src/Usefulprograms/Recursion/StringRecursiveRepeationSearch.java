@@ -1,4 +1,4 @@
-package com.liang.chapter18.Ex_18_10;
+package Usefulprograms.Recursion;
 
 public class StringRecursiveRepeationSearch {
 	

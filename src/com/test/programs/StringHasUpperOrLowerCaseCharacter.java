@@ -1,6 +1,6 @@
 package com.test.programs;
 
-public class password {
+public class StringHasUpperOrLowerCaseCharacter {
 
 	public static void main(String[] args) {
 

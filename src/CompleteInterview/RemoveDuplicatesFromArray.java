@@ -24,7 +24,7 @@ public class RemoveDuplicatesFromArray {
 		
 //		ins=Arrays.stream(ins).distinct().toArray();
 		
-		System.out.println(" Before removing Duplicates The elements are "+Arrays.toString(nc));
+		System.out.println(" After removing Duplicates The elements are "+Arrays.toString(nc));
 
 	}
 
