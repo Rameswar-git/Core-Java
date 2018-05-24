@@ -11,7 +11,7 @@ public class FactorialSeris {
 //	  }
 //      System.out.println(sum);
 		
-		System.out.println(fact(6));
+		System.out.println(fact(5));
 	}
 
 	private static double fact(double i) {

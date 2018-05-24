@@ -3,7 +3,7 @@ package com.liange.chapter5;
 public class Pattern4 {
 
 	public static void main(String[] args) {
-        int norow=10;
+        int norow=8;
      for (int i = 1; i <= norow; i++) {
     	 for(int k=norow-i;k>0;k--){
     		 System.out.print("    ");
@@ -20,7 +20,6 @@ public class Pattern4 {
 			}
 			count=count/2;
            while(count/2 >0){
-//        	   System.out.print(count/2+" ");
         	   System.out.printf("%4d", (count/2));	
         	   count=count/2;
            }

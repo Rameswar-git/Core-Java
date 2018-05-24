@@ -15,7 +15,7 @@ public class StringRepeatationOperations {
 
 		List<String> names = Arrays.stream(name.split("\\s")).collect(Collectors.toList());
 
-		List<String> namess = Arrays.stream(name.split("\\s")).filter(x -> Collections.frequency(names, x) > 1).distinct()
+		List<String> namess = Arrays.stream(name.split("\\s")).filter(x -> Collections.frequency(names, x) <2).distinct()
 				.collect(Collectors.toList());
 
 		System.out.println(namess);
