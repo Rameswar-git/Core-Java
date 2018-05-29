@@ -8,7 +8,7 @@ public class AnagramStrings {
 		
         isAnagram("Keep", "Peek");  
         isAnagram("Mother In Law", "Hitler Woman");  
-
+        
 	}
 
 	private static void isAnagram(String string, String string2) {
