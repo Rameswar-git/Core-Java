@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class SortMap {
 	
@@ -24,9 +25,9 @@ public class SortMap {
 		Map<String, Integer> result2 = new LinkedHashMap<>();
 		
 		
-		unsortedmap.entrySet().stream().sorted(Map.Entry.<String,Integer>comparingByKey()).
-		forEachOrdered(x->result2.put(x.getKey(), x.getValue()));
-		
+	   unsortedmap.entrySet().stream().sorted(Map.Entry.<String,Integer>comparingByValue().reversed()).forEachOrdered(x->result2.put(x.getKey(), x.getValue()));
+
+	
 		
 		System.out.println(result2);
 		
