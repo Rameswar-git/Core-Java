@@ -1,5 +1,6 @@
 package CompleteInterview;
 
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -8,7 +9,8 @@ public class StringRepeatedKthDistanceMove {
 
 	public static void main(String[] args) {
 		String input = "geeksforgeeks";
-		int repdistance = 2;
+		
+		final int noofseparation=2;
 
 		Map<Character, Integer> collect = input.chars().mapToObj(p -> (char) p)
 				.collect(Collectors.toMap(v -> v, v -> 1, (oldval, newval) -> oldval + 1));
@@ -17,37 +19,28 @@ public class StringRepeatedKthDistanceMove {
 				.collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (oldValue, newValue) -> oldValue,
 						LinkedHashMap::new));
 		
- 
+		StringBuilder build = new StringBuilder();
+	
+		long n=collect.keySet().stream().count();
 
-		int iterationcount = repdistance + 1;
-		
-		StringBuilder build=new StringBuilder();
-		
-		while(collect.keySet().stream().filter(e -> collect.get(e)>0).findAny().isPresent()) {
-			while (iterationcount > 0) {
-				int count=0;
-				char c;
-				while(true) {
-					if(collect.get(count).intValue() > 0) {
-						c=collect.keySet().stream().filter(e -> collect.get(e)>0).findFirst().get();
-						build.append(c);
+		while (n>0) {			
+			int val = noofseparation+1;
+				Iterator<Map.Entry<Character, Integer>> it = collect.entrySet().iterator();
+				while (it.hasNext() && val > 0) {
+					Map.Entry<Character, Integer> pair = it.next();
+					if(pair.getValue() > 0) {
+						build.append(pair.getKey());
+						collect.put(pair.getKey(), pair.getValue() - 1);
+						val--;
 					}else {
-						continue;
+						it.remove();
 					}
+
 				}
-				
-//				collect.keySet().stream().filter(e -> collect.get(e)>0).findAny().get();
-				
-				
-				iterationcount--;
-			}
-			iterationcount=repdistance + 1;;
+				n--;
 		}
 
- 
-
-
-		System.out.println(collect);
+		System.out.println(build.toString());
 	}
 
 }

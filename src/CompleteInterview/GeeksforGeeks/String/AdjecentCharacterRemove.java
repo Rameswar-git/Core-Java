@@ -1,5 +1,8 @@
 package CompleteInterview.GeeksforGeeks.String;
 
+
+//Difficult Process one Easy Process also avalible
+
 public class AdjecentCharacterRemove {
 
 	public static void main(String[] args) {
