@@ -1,6 +1,7 @@
 package Usefulprograms;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.net.URL;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -14,6 +15,7 @@ public class UrlWordCount {
 
 	public static void main(String[] args) throws IOException {
 		URL ur=new URL("http://cs.armstrong.edu/liang/data/Lincoln.txt");
+		InputStream openStream = ur.openStream();
 		Scanner sc=new Scanner(ur.openStream());
 		
 
