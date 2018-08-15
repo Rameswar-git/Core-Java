@@ -16,8 +16,8 @@ public class Consumer1 extends Thread{
 		for(int i=0;i<5;i++){
 			
 			try {
-				System.out.println(Thread.currentThread().getName());
-				System.out.println("Consumer Consumeing"+prod.bq.poll(10, TimeUnit.MILLISECONDS));
+//				System.out.println(Thread.currentThread().getName());
+				System.out.println("Consumer Consumeing"+prod.bq.take());
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
