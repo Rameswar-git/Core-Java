@@ -1,4 +1,4 @@
-package CompleteInterview.RegularExpressions;
+package CompleteInterview.RegularExpression;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
