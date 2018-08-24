@@ -3,7 +3,7 @@ package ProducerAndConsumer;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-public class Producer1 extends Thread {
+public class Producer1 extends Thread  {
 	
 	BlockingQueue<String> bq;
 	

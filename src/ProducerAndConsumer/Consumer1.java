@@ -1,6 +1,5 @@
 package ProducerAndConsumer;
 
-import java.util.concurrent.TimeUnit;
 
 public class Consumer1 extends Thread{
 	

@@ -7,7 +7,7 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class ProducerConsumerSolutionUsingLock {
+public class ProducerConsumerSolutionUsingLock  {
 
 	public static void main(String[] args) {
 		ProducerConsumerImpl sharedObject = new ProducerConsumerImpl();
