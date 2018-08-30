@@ -41,6 +41,8 @@ public class AdjecentCharacterRemove {
 			}		
 		
 		System.out.println(sb.toString());
+		
+		 System.out.println(string.replaceAll("(.)(\\1)+", "$1"));
 
 
 	}
