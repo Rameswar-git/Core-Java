@@ -4,8 +4,8 @@ public class LongestSubString {
 
 	public static void main(String[] args) {
 		
-		String st1="abcdxyz";
-		String st2="xyzabcd";
+		String st1="abcd458963xyz";
+		String st2="xyzab458963cd";
 		
 		String maxst="";
 		
