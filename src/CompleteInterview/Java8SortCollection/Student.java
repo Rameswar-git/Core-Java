@@ -1,6 +1,6 @@
 package CompleteInterview.Java8SortCollection;
 
-public class Student  {
+public class Student   {
 	
 	Student(int age,String namer){
 		this.age=age;
