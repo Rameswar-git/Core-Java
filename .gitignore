@@ -2,15 +2,7 @@
 /.settings/
 /.classpath
 /.project
-pom.properties
 /bin/
-target/*
-/target/classes/**
-bin/*
-*/bin/*
-target/*
-*/target/*
-*/target/**
 *.class
 *.classpath
 *.project
