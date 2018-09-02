@@ -1,6 +1,9 @@
+/target/
+/.settings/
+/.classpath
+/.project
 pom.properties
 /bin/
-/target/
 target/*
 /target/classes/**
 bin/*
