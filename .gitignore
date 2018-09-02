@@ -6,3 +6,4 @@
 *.class
 *.classpath
 *.project
+/target/classes/META-INF/maven/Programs/com.Programs/pom.properties
