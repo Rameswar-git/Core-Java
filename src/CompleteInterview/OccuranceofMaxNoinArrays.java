@@ -6,7 +6,7 @@ import java.util.stream.IntStream;
 public class OccuranceofMaxNoinArrays {
 
 	public static void main(String[] args) {
-         int[] ins= {3,5,2,5,5,5,0,5,9,5};
+         int[] ins= {3,2,0,5,9,6,0};
          
          int max=Arrays.stream(ins).max().getAsInt();
 
