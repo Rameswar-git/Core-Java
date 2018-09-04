@@ -1,39 +1,28 @@
 package CompleteInterview;
 
-import java.util.Scanner;
 
 public class GcdOf2Numbers {
 
 	public static void main(String[] args) {
 		
-		Scanner scan=new Scanner(System.in);
-		
-		System.out.println(" Enter the First Number ");
-		
-		int firstno=scan.nextInt();
-		
-		System.out.println(" Enter the Second Number ");
-		
-		
-		int secondno=scan.nextInt();
-		
-		System.out.print(" gcd of "+firstno+" and "+secondno+" is ");
-		
-		int gcd=1;
-		
-		while(true) {
-			if((firstno % 2 == 0) && (secondno % 2 == 0)) {
-				gcd*=2;
-				firstno=firstno/2;
-				secondno=secondno/2;
-			}else {
-				break;
+		int n1 = 16;
+		int n2 = 8;
+
+		int gdc = 1;
+
+		int i = 2;
+
+		while (n1 >=1  && n2 >= 1 && i<10) {
+			if ((n1 % i == 0) && (n2 % i == 0)) {
+				gdc *= i;
+				n1 = n1 / i;
+				n2 = n2 / i;
+			} else {
+				i++;
 			}
 		}
-		
-		System.out.print(gcd);
-		
-		scan.close();
+
+		System.out.println(gdc);
 
 	}
 
