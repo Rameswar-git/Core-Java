@@ -19,7 +19,7 @@ public class MonthlyDepositInLICCalculation {
 		}
 	    
 	    System.out.println(" Total Amout is "+totalamout);
-	    
+	    scan.close();
 	}
 
 }
