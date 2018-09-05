@@ -1,6 +1,7 @@
 package CompleteInterview;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -14,7 +15,11 @@ public class GetWordFrequencyCountMoreThen2 {
         
         Set<String> sv=Arrays.stream(name).filter(p -> !nam.add(p)).collect(Collectors.toSet());
         
-        sv.forEach(System.out::println);
+//        sv.forEach(System.out::println);
+        
+		String string = Arrays.stream(name).filter(f -> Collections.frequency(Arrays.asList(name), f) > 1).findAny().get();
+		
+		System.out.println(string);
         
 	}
 

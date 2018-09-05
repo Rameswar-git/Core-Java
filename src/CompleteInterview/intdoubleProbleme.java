@@ -17,7 +17,7 @@ public class intdoubleProbleme {
 
 	private static double Fact(int i) {
 		
-		double fact=1;  // Here if we Change from double to integere Then Probleme 
+		int fact=1;  // Here if we Change from double to integere Then Probleme 
 		
 //		System.out.print("Factorial of "+i+" is  ");
 		
