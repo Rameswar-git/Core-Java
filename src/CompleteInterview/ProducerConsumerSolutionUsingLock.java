@@ -7,77 +7,71 @@ import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
+
 public class ProducerConsumerSolutionUsingLock  {
 
 	public static void main(String[] args) {
-		ProducerConsumerImpl sharedObject = new ProducerConsumerImpl();
+		producerconsumerimpl share = new producerconsumerimpl();
+		Producer prod = new Producer(share);
+		Consumer cons = new Consumer(share);
+		
+		prod.start();
+		cons.start();
 
-		Producer p = new Producer(sharedObject);
-		Consumer c = new Consumer(sharedObject);
-
-		p.start();
-		c.start();
 	}
 }
 
-class ProducerConsumerImpl {
-	private static final int CAPACITY = 5;
-	private final Queue queue = new LinkedList<>();
-	private final Random theRandom = new Random();
+class producerconsumerimpl {
+	private final static int BUFFER_SIZE = 5;
+	private final Random ran = new Random();
+	private final Lock lck = new ReentrantLock();
+	private Queue<Integer> que = new LinkedList<>();
+	private final Condition Bufferfull = lck.newCondition();
+	private final Condition DataAvlibel = lck.newCondition();
 
-	// lock and condition variables
-	private final Lock aLock = new ReentrantLock();
-//	private final Condition bufferNotFull = aLock.newCondition();
-//	private final Condition bufferNotEmpty = aLock.newCondition();
-
-	public void put() throws InterruptedException {
-		aLock.lock();
+	public void put() throws InterruptedException  {
+		lck.lock();
 		try {
-//			while (queue.size() == CAPACITY) {
+			while (que.size() == BUFFER_SIZE) {
 				System.out.println(Thread.currentThread().getName() + " : Buffer is full, waiting");
-//				bufferNotEmpty.await();
-//			}
-			int number = theRandom.nextInt();
-			boolean isAdded = queue.offer(number);
+				Bufferfull.await();
+			}
+			int number = ran.nextInt();
+			boolean isAdded = que.offer(number);
 			if (isAdded) {
 				System.out.printf("%s added %d into queue %n", Thread.currentThread().getName(), number);
 
 				// signal consumer thread that, buffer has element now
 				System.out.println(Thread.currentThread().getName() + " : Signalling that buffer is no more empty now");
-//				bufferNotFull.signalAll();
+				DataAvlibel.signalAll();
 			}
 		} finally {
-			aLock.unlock();
+			lck.unlock();
 		}
 	}
 
 	public void get() throws InterruptedException {
-		aLock.lock();
+		lck.lock();
 		try {
-//			while (queue.size() == 0) {
+			
+			while (que.size() == 0) {
 				System.out.println(Thread.currentThread().getName() + " : Buffer is empty, waiting");
-//				bufferNotFull.await();
-//			}
-
-			Integer value = (Integer) queue.poll();
-			if (value != null) {
-				System.out.printf("%s consumed %d from queue %n", Thread.currentThread().getName(), value);
-
-				// signal producer thread that, buffer may be empty now
-				System.out.println(Thread.currentThread().getName() + " : Signalling that buffer may be empty now");
-//				bufferNotEmpty.signalAll();
+				DataAvlibel.await();
 			}
 
+			System.out.println(que.poll());
+			Bufferfull.signalAll();
+
 		} finally {
-			aLock.unlock();
+			lck.unlock();
 		}
 	}
 }
 
 class Producer extends Thread {
-	ProducerConsumerImpl pc;
+	producerconsumerimpl pc;
 
-	public Producer(ProducerConsumerImpl sharedObject) {
+	public Producer(producerconsumerimpl sharedObject) {
 		super("PRODUCER");
 		this.pc = sharedObject;
 	}
@@ -88,17 +82,17 @@ class Producer extends Thread {
 			for (int i = 0; i < 30; i++) {
 				pc.put();
 			}
-			
+
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
 	}
 }
 
-class Consumer extends Thread {
-	ProducerConsumerImpl pc;
+ class Consumer extends Thread {
+	producerconsumerimpl pc;
 
-	public Consumer(ProducerConsumerImpl sharedObject) {
+	public Consumer(producerconsumerimpl sharedObject) {
 		super("CONSUMER");
 		this.pc = sharedObject;
 	}
@@ -109,7 +103,7 @@ class Consumer extends Thread {
 			for (int i = 0; i < 30; i++) {
 				pc.get();
 			}
-		
+
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
