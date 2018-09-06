@@ -58,7 +58,6 @@ public class MergeSort {
 				rightslot++;
 				k++;
 			}
-
 		}
 		
 		for (int i = 0; i < temparr.length; i++) {
