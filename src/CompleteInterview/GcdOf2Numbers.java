@@ -5,8 +5,8 @@ public class GcdOf2Numbers {
 
 	public static void main(String[] args) {
 		
-		int n1 = 16;
-		int n2 = 8;
+		int n1 = 625;
+		int n2 = 125;
 
 		int gdc = 1;
 
