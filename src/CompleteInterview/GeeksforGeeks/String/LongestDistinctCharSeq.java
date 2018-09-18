@@ -38,7 +38,7 @@ public class LongestDistinctCharSeq {
 //	}
 	
 	public static void main(String[] args) {
-		String name = "ABDEFGABEF";
+		String name = "ABDEFGABEFZMTLPOQR";
 
 		StringBuilder build = new StringBuilder();
 
@@ -54,6 +54,10 @@ public class LongestDistinctCharSeq {
 				build.setLength(0);
 				build.append(name.charAt(i));
 			}
+		}
+		
+		if (maxstring.length() < build.toString().length()) {
+			maxstring= build.toString();
 		}
 		
 		System.out.println("The Longest Substring is "+maxstring);

@@ -1,10 +1,10 @@
 package CompleteInterview.GeeksforGeeks.String;
 
-public class StringRotation {
+public class StringRotation { //Not working for the characters of length three
 
 	public static void main(String[] args) {
-		String str1 = "ABAD";
-		String str2 = "ADAB";
+		String str1 = "ABCD";
+		String str2 = "CDAB";
 
 		checkclockwiserotation(str1, str2);
 
