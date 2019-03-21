@@ -1,4 +1,4 @@
-package CompleteInterview;
+package CompleteInterview.Strings;
 
 public class RemoveallSpaceString {
 
