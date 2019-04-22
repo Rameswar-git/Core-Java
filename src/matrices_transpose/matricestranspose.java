@@ -43,7 +43,6 @@ public class matricestranspose {
 			for(int j=0;j<cloA;j++){
 				c[j][i]=matrixA[i][j];
 			}
-			
 		}		
 		return c;
 	}
