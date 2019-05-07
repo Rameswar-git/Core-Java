@@ -46,25 +46,43 @@ public class IsomorphicString {
 //		
 //	}
 	
-	public static void main(String[] args) {
-		String text1 = "good";
-		String text2 = "deer";
-          boolean isisomorphic=true;
-		for (int i = 1; i < text1.length() - 1; i++) {
-			if ((text1.charAt(i) == text1.charAt(i - 1)) && (text2.charAt(i) == text2.charAt(i - 1))) {
+// 	public static void main(String[] args) {
+// 		String text1 = "good";
+// 		String text2 = "deer";
+//           boolean isisomorphic=true;
+// 		for (int i = 1; i < text1.length() - 1; i++) {
+// 			if ((text1.charAt(i) == text1.charAt(i - 1)) && (text2.charAt(i) == text2.charAt(i - 1))) {
 
-			} else if ((text1.charAt(i) != text1.charAt(i - 1)) && (text2.charAt(i) != text2.charAt(i - 1))) {
+// 			} else if ((text1.charAt(i) != text1.charAt(i - 1)) && (text2.charAt(i) != text2.charAt(i - 1))) {
 
-			} else {
-				isisomorphic=false;
-				System.out.println(" both Strings are not Isomorphic ");
-				break;
+// 			} else {
+// 				isisomorphic=false;
+// 				System.out.println(" both Strings are not Isomorphic ");
+// 				break;
+// 			}
+// 		}
+		
+// 		if(isisomorphic)
+// 			System.out.println(" Both Strings are Isomorphic ");
+
+// 	}
+	
+  	public static void main(String[] args) {
+		String text1 = "goodpx";
+		String text2 = "deerpp";
+		boolean isisomorphic = true;
+		for (int i = 0; i < text1.length() - 1; i++) {
+			boolean s = text1.charAt(i) == text1.charAt(i + 1);
+			boolean s2 = text2.charAt(i) == text2.charAt(i + 1);
+			if (s ^ s2) {
+				isisomorphic = false;
 			}
 		}
-		
-		if(isisomorphic)
-			System.out.println(" Both Strings are Isomorphic ");
-
+		if (isisomorphic) {
+			System.out.println("Strings are isomorphic");
+		} else {
+			System.out.println("Strings are not isomorphic");
+		}
 	}
 
 }
