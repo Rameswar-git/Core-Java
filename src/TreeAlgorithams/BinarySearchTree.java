@@ -8,7 +8,6 @@ public class BinarySearchTree {
 
 	public static void main(String[] args) {
        Map<Integer,int[]> mps=new HashMap<>();
-       
 //       int[] child1= {1,2};
 //       int[] child2= {3,4};
 //       int[] child3= {5,6};
