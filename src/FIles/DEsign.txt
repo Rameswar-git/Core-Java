@@ -1,0 +1,41 @@
+72. Can you tell some examples of
+Factory Method design pattern
+implementation in Java?
+
+74. What are the examples of Builder
+design pattern in JDK?
+
+75. What are the examples of
+Abstract Factory design pattern in
+JDK?
+
+76. What are the examples of
+Decorator design pattern in JDK?
+
+77. What are the examples of Proxy
+design pattern in JDK?
+
+78. What are the examples of Chain of
+Responsibility design pattern in JDK?
+
+81. What are the examples of
+Interpreter design pattern in JDK?
+
+85. How Decorator design pattern is
+different from Proxy pattern?
+
+90. What are the examples of Adapter design pattern in JDK?
+
+91. What is the difference between
+Factory and Abstract Factory design
+pattern?
+
+93. What is SOLID design principle?
+
+96. What is the design pattern
+suitable to access elements of a
+Collection?
+
+105. What is the difference between
+Builder design pattern and Factory
+design pattern?
