@@ -8,8 +8,4 @@ public class Car extends Vehicle {
 		System.out.println(super.engine());
 		return super.engine();
 	}
-
-	
-	
-	
 }

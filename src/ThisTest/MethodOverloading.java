@@ -8,7 +8,6 @@ public class MethodOverloading {
 		float b=6;
 		
 		System.out.println(sum(a, b));
-
 	}
 	
 	public static int sum(int a ,int b) {
