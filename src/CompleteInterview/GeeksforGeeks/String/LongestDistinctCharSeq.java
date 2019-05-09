@@ -38,7 +38,7 @@ public class LongestDistinctCharSeq {
 //	}
 	
 	public static void main(String[] args) {
-		String name = "ABDEFGABEFZMTLPOQR";
+		String name = "ABDEFGABEFZMTLLPOQR";
 
 		StringBuilder build = new StringBuilder();
 

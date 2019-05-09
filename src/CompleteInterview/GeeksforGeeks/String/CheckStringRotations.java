@@ -53,7 +53,7 @@ public class CheckStringRotations {
 	public static void main(String[] args) {
 
 		String name1 = "ABCD";
-		String name2 = "CBDA";
+		String name2 = "DCAB";
 
 		boolean startcheck = false;
 		boolean endcheck = false;
