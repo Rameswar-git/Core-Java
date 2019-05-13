@@ -70,7 +70,7 @@ class SecondWorkerExc implements Runnable {
 	}
 }
 
-class App {
+public class Exchangers {
 
 	public static void main(String[] args) {
 
