@@ -1,0 +1,69 @@
+to configure multiple enviroment we should add below 2 line
+
+    "startlocal": "ng serve --configuration=local",
+    "startprod": "ng serve --configuration=production",
+    
+    then in angular.json file in build section as well as serve section add below lines respectivelly
+    1 Build section
+    ================
+     "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            },
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+          
+          2.Serve Section
+          ================
+                    "configurations": {
+            "production": {
+              "browserTarget": "EmailGeneratorUI:build:production"
+            },
+            "local": {
+              "browserTarget": "EmailGeneratorUI:build:local"
+            }
+          }
