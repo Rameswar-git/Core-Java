@@ -8,8 +8,6 @@ public class arraylisttest {
 	
 
 	public static void main(String[] args) {
-		
-
 	
 		LinkedList<String> polno=new LinkedList<String>();
         polno.add("VPC1886545000100");
