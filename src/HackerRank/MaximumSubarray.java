@@ -1,12 +1,20 @@
 package HackerRank;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Arrays;
+import java.util.TreeSet;
 
 public class MaximumSubarray {
-	public static void main(String[] args) {
-		long[] inarr = { 3, 3, 9, 9, 5 };
-//		long[] inarr = { 1 ,5 ,9 };
-		System.out.println(maximumSum(inarr, 7));
+	public static void main(String[] args) throws IOException {
+		 long[] inarr = { 2, 2, 9, 9, 1 };
+		// long[] inarr = { 1 ,5 ,9 };
+//		long[] inarr = { 1, 5, 9 };
+//		long[] inarr =Arrays.stream(Files.readAllLines(Paths.get("C:\\Users\\Vicky\\Desktop\\test1.txt")).get(0).split("\\s+")).mapToLong(p -> Long.parseLong(p)).toArray();
+//		System.out.println(maximumSum(inarr, 1853237434));
+//		 solve(1853237434,inarr);
+		 solve(7,inarr);
 	}
 
 	static long maximumSum(long[] a, long m) {
@@ -58,4 +66,23 @@ public class MaximumSubarray {
 
 		return 0;
 	}
+	
+    static void solve(long M, long[] array){
+        TreeSet<Long> sumSet = new TreeSet<Long>();
+        long best = 0;
+        long sum = 0;
+
+        for(int i = 0; i < array.length; i++){
+            sum = (sum + array[i]) % M;
+            Long up = sumSet.higher(sum);
+            if(up == null){
+                best = Math.max(best,sum);
+            } else {
+                best = Math.max(best, M - up + sum);
+            }
+            sumSet.add(sum);
+        }
+
+        System.out.println(best);
+    }
 }

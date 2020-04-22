@@ -1,0 +1,12 @@
+every node based project by default searches for an file name = server.js
+if the file is present then there is n start required in package.json file
+when we run -> npm start without start command in scripts of package.json 
+then by default node will take this server.js file as input and executes
+
+but if start is not present and no file like server.js then it will throw error
+
+except server.js if you want you custome file to run the  use start script like
+"start" : "node test.js"
+   then npm start to run file test.js
+   
+in this scenario no use main parameter in package.json file
