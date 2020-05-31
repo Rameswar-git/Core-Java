@@ -1,0 +1,16 @@
+create virtual machine with cent os (this is simillar with an instance in aws where instance os is cent os)
+then  install docker
+then from virtual box cent os comand prompt using docker commands pull jekins image from docker hub -> then the run the jenkin image our jenkins will up and running as docker container . access it by using docker container port
+
+generally how jenkins deploy docker based app to remote machine
+------------------------------------------------------------------
+using previous jenkins docker container 
+ jenkins will execute the docker compose file of the abc application and create an image out of it
+ then jenkins will push that image to docker hub or docker.fmr.com and  (this usally happens in publich.sh file)
+ then to deploy the pushed image to an remote instance jenkins will execute an script like deploy.sh
+                      where it will either copy the deploy.sh file from jenkins machine(container) to romote machine(container) or if the file deploy.sh already
+					   exists then jenkins will execute deploy.sh in the remote machine from jenkins machine itself by loging into the remot machine using ssh and execute deploy.sh file there
+					     the after excuting the deploy.sh file in remote machine it will pull the image pushed in previous step and run it
+						 this way app is deployed to an remot machine using jenkins
+ 
+
