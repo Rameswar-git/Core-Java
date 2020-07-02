@@ -1,63 +1,50 @@
 package com.rameswar.hackerRank.PS;
 
-import java.io.File;
 import java.io.FileNotFoundException;
-import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class AlmostSorted {
+    public static void main(String[] args) throws FileNotFoundException {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = scanner.nextInt();
+        }
+        int[] sortedArr = Arrays.stream(arr).sorted().toArray();
+        List<Integer> differences = compareArrays(arr,sortedArr);
+        Integer firstDifference = differences.get(0);
+        Integer lastDifference = differences.get(differences.size()-1);
+        if(differences.isEmpty()) {
+            System.out.println("yes");
+        }else if(differences.size() == 2) {
+            System.out.println("yes");
+            System.out.printf("%s %d %d", "swap",firstDifference+1,lastDifference+1);
+        }else {
+            reverse(arr,firstDifference,lastDifference);
+            if(compareArrays(arr, sortedArr).isEmpty()) {
+                System.out.println("yes");
+                System.out.printf("%s %d %d", "reverse",firstDifference+1,lastDifference+1);
+            }else {
+                System.out.println("no");
+            }
+        }
+        scanner.close();
+    }
 
-	private static ArrayList<Integer> lst;
-	private static boolean inodr(int p) {
-		return lst.get(p-1) < lst.get(p) && lst.get(p) < lst.get(p+1);
-	}
-	private static void swap(int p, int q) {
-		int a = lst.get(p);
-		lst.set(p, lst.get(q));
-		lst.set(q, a);
-	}
-	public static void main(String[] args) throws FileNotFoundException {
-		Scanner sc = new Scanner(new File("C:\\Users\\Vicky\\Desktop\\input00.txt"));
-		int n = sc.nextInt();
-		lst = new ArrayList<>();
-		lst.add(-1);
-		ArrayList<Integer> dor = new ArrayList<>();
-		for (int i = 1; i <= n; i++) {
-			int a = sc.nextInt();
-			lst.add(a);
-			if (lst.get(i - 1) > lst.get(i)) {
-				dor.add(i-1);
-			}
-		}
-		lst.add(100000000);
-		if (dor.size() == 0) {
-			System.out.println("yes");
-			return;
-		}
-//		if (dor.size() < 5) {
-			for(int k=dor.get(0) + 1; k <= n; k++) {
-				swap(dor.get(0), k);
-				boolean flag = inodr(k);
-				for(int p : dor) {
-					if(!inodr(p)) flag = false;
-				}
-				if(flag) {
-					System.out.println("yes");
-					System.out.println("swap "+dor.get(0)+" "+k);
-					return;
-				}
-				swap(dor.get(0), k);
-			}
-//		}
-		if(dor.get(0) + dor.size()  == dor.get(dor.size() - 1) + 1) {
-			int st = dor.get(0);
-			int ed = dor.get(dor.size() - 1) + 1;
-			if(lst.get(st - 1) < lst.get(ed) && lst.get(st) < lst.get(ed + 1)) {
-				System.out.println("yes");
-				System.out.println("reverse "+st+" "+ed);
-				return;
-			}
-		}
-		System.out.println("no");
-	}
+    private static void reverse(int[] arr, Integer firstDifference, Integer lastDifference) {
+        for (int i = 0; i < ((lastDifference-firstDifference)/2)+1; i++) {
+            int temp = arr[firstDifference+i];
+            arr[firstDifference+i]=arr[lastDifference-i];
+            arr[lastDifference-i] = temp;
+        }
+    }
+
+    private static List<Integer> compareArrays(int[] arr, int[] sortedArr) {
+        return IntStream.range(0, arr.length).filter(m -> arr[m] != sortedArr[m]).boxed().collect(Collectors.toList());
+    }
 }
