@@ -1,29 +1,33 @@
 package Usefulprograms;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
 
-import com.rameswar.hackerRank.PS.Test;
-import com.rameswar.hackerRank.PS.TheFullCountingSort;
+import com.rameswar.hackerRank.Interview.SherlockandAnagrams;
+//import com.rameswar.hackerRank.Interview.Test;
 
 
 public class ExecutionTimeProvider {
-	public static void main(String[] args) throws IOException {
-		callTestMethod();
-//		callOthercallMethod();
+	public static void main(String[] args) throws Exception {
+//		callTestMethod();
+		callOthercallMethod();
 	}
 	
-	private static void callOthercallMethod() throws FileNotFoundException {
+	private static void callOthercallMethod() throws Exception {
 		Instant start = Instant.now();
-		TheFullCountingSort.main(null);
+		long beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+		SherlockandAnagrams.main(null);
+		long afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+		System.out.println("Memory used: "+(afterUsedMem-beforeUsedMem));
 		timeTaken(start,Instant.now());
 	}
 
-	private static void callTestMethod() throws IOException {
+	private static void callTestMethod() throws Exception {
 		Instant start = Instant.now();
-		Test.main(null);
+		long beforeUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+//		Test.main(null);
+		long afterUsedMem=Runtime.getRuntime().totalMemory()-Runtime.getRuntime().freeMemory();
+		System.out.println("Memory used: "+(afterUsedMem-beforeUsedMem));
 		timeTaken(start,Instant.now());
 	}
 	
