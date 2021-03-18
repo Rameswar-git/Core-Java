@@ -1,5 +1,5 @@
 every node based project by default searches for an file name = server.js
-if the file is present then there is n start required in package.json file
+if the file is present then there is no start script is required in package.json file
 when we run -> npm start without start command in scripts of package.json 
 then by default node will take this server.js file as input and executes
 
