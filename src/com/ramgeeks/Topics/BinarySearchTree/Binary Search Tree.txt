@@ -1,0 +1,44 @@
+BST
+---
+Construction and Conversion :
+https://www.geeksforgeeks.org/sorted-array-to-balanced-bst/
+https://www.geeksforgeeks.org/binary-tree-to-binary-search-tree-conversion/
+https://www.geeksforgeeks.org/binary-tree-binary-search-tree-conversion-using-stl-set/
+https://www.geeksforgeeks.org/convert-normal-bst-balanced-bst/
+https://www.geeksforgeeks.org/add-greater-values-every-node-given-bst/
+https://www.geeksforgeeks.org/bst-tree-sum-smaller-keys/
+https://www.geeksforgeeks.org/transform-bst-sum-tree/
+https://www.geeksforgeeks.org/construct-bst-given-level-order-traversal/
+https://www.geeksforgeeks.org/check-given-array-of-size-n-can-represent-bst-of-n-levels-or-not/
+https://www.geeksforgeeks.org/merge-two-balanced-binary-search-trees/
+
+Checking and Searching :
+https://www.geeksforgeeks.org/iterative-searching-binary-search-tree/
+https://www.geeksforgeeks.org/find-the-minimum-element-in-a-binary-search-tree/
+https://www.geeksforgeeks.org/check-if-a-given-array-can-represent-preorder-traversal-of-binary-search-tree/
+https://www.geeksforgeeks.org/lowest-common-ancestor-in-a-binary-search-tree/
+https://www.geeksforgeeks.org/find-k-th-smallest-element-in-bst-order-statistics-in-bst/
+https://www.geeksforgeeks.org/kth-largest-element-in-bst-when-modification-to-bst-is-not-allowed/
+https://www.geeksforgeeks.org/check-if-given-sorted-sub-sequence-exists-in-binary-search-tree/
+https://www.geeksforgeeks.org/simple-recursive-solution-check-whether-bst-contains-dead-end/
+https://www.geeksforgeeks.org/check-array-represents-inorder-binary-search-tree-not/
+https://www.geeksforgeeks.org/check-two-bsts-contain-set-elements/
+https://www.geeksforgeeks.org/largest-number-bst-less-equal-n/
+https://www.geeksforgeeks.org/shortest-distance-between-two-nodes-in-bst/
+https://www.geeksforgeeks.org/find-a-pair-with-given-sum-in-bst/
+
+https://www.geeksforgeeks.org/count-pairs-from-two-bsts-whose-sum-is-equal-to-a-given-value-x/
+https://www.geeksforgeeks.org/find-pairs-with-given-sum-such-that-pair-elements-lie-in-different-bsts/
+
+https://www.geeksforgeeks.org/remove-bst-keys-outside-the-given-range/
+https://www.geeksforgeeks.org/print-bst-keys-in-the-given-range/
+https://www.geeksforgeeks.org/count-bst-subtrees-that-lie-in-given-range/
+https://www.geeksforgeeks.org/remove-leaf-nodes-binary-search-tree/
+https://www.geeksforgeeks.org/sum-k-smallest-elements-bst/
+https://www.geeksforgeeks.org/inorder-successor-in-binary-search-tree/
+https://www.geeksforgeeks.org/inorder-predecessor-successor-given-key-bst/
+https://www.geeksforgeeks.org/inorder-predecessor-and-successor-for-a-given-key-in-bst-iterative-approach/
+https://www.geeksforgeeks.org/find-pair-given-sum-bst/  -- not an efficient solution in this article 
+https://www.geeksforgeeks.org/maximum-element-two-nodes-bst/
+https://www.geeksforgeeks.org/find-closest-element-binary-search-tree/
+
