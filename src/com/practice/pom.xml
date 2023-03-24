@@ -10,7 +10,7 @@
 	<name>SpringEmailWtihTemplatesExample</name>
 
 	<properties>
-		<springframework.version>5.2.0.RELEASE</springframework.version>
+		<springframework.version>5.2.23.RELEASE</springframework.version>
 	</properties>
 
 	<dependencies>
